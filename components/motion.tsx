@@ -1,14 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { HTMLAttributes, ReactNode } from "react";
+import type { ReactNode } from "react";
 
-type Props = HTMLAttributes<HTMLDivElement> & {
+type MotionProps = {
   children: ReactNode;
   delay?: number;
+  className?: string;
 };
 
-export function FadeIn({ children, delay = 0, className = "", ...props }: Props) {
+export function FadeIn({
+  children,
+  delay = 0,
+  className = "",
+}: MotionProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 18 }}
@@ -16,14 +21,17 @@ export function FadeIn({ children, delay = 0, className = "", ...props }: Props)
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.55, delay, ease: "easeOut" }}
       className={className}
-      {...props}
     >
       {children}
     </motion.div>
   );
 }
 
-export function HoverCard({ children, delay = 0, className = "", ...props }: Props) {
+export function HoverCard({
+  children,
+  delay = 0,
+  className = "",
+}: MotionProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -32,7 +40,6 @@ export function HoverCard({ children, delay = 0, className = "", ...props }: Pro
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -5 }}
       className={className}
-      {...props}
     >
       {children}
     </motion.div>
