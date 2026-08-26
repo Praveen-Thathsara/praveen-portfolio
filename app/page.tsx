@@ -58,57 +58,57 @@ const projects = [
 ];
 
 const skillGroups = [
-  { 
-  title: "Languages", 
-  icon: Code2, 
-  items: ["JavaScript", "TypeScript", "Java", "Python", "Dart", "C"] 
-},
+  {
+    title: "Languages",
+    icon: Code2,
+    items: ["JavaScript", "TypeScript", "Java", "Python", "Dart", "C"]
+  },
 
-{ 
-  title: "Frontend", 
-  icon: Code2, 
-  items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"] 
-},
+  {
+    title: "Frontend",
+    icon: Code2,
+    items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"]
+  },
 
-{ 
-  title: "Backend", 
-  icon: Server, 
-  items: ["Node.js", "Express", "FastAPI", "REST APIs"] 
-},
+  {
+    title: "Backend",
+    icon: Server,
+    items: ["Node.js", "Express", "FastAPI", "REST APIs"]
+  },
 
-{ 
-  title: "Mobile", 
-  icon: Smartphone, 
-  items: ["Flutter"] 
-},
+  {
+    title: "Mobile",
+    icon: Smartphone,
+    items: ["Flutter"]
+  },
 
-{ 
-  title: "Databases", 
-  icon: Database, 
-  items: ["Firebase", "Firestore", "MongoDB", "MySQL"] 
-},
+  {
+    title: "Databases",
+    icon: Database,
+    items: ["Firebase", "Firestore", "MongoDB", "MySQL"]
+  },
 
-{ 
-  title: "Cloud & DevOps", 
-  icon: Cloud, 
-  items: [
-    "AWS",
-    "EC2",
-    "Elastic Beanstalk",
-    "RDS",
-    "Elastic Load Balancing",
-    "Auto Scaling",
-    "CloudWatch",
-    "SNS",
-    "Docker",
-    "Docker Compose",
-    "Kubernetes",
-    "Jenkins",
-    "CI/CD",
-    "Git",
-    "GitHub"
-  ] 
-},
+  {
+    title: "Cloud & DevOps",
+    icon: Cloud,
+    items: [
+      "AWS",
+      "EC2",
+      "Elastic Beanstalk",
+      "RDS",
+      "Elastic Load Balancing",
+      "Auto Scaling",
+      "CloudWatch",
+      "SNS",
+      "Docker",
+      "Docker Compose",
+      "Kubernetes",
+      "Jenkins",
+      "CI/CD",
+      "Git",
+      "GitHub"
+    ]
+  },
 ];
 
 export default function Home() {
@@ -292,17 +292,27 @@ export default function Home() {
       <section className="container-page py-16">
         <FadeIn className="card grid gap-8 p-8 sm:p-10 md:grid-cols-3">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-teal-300">Learning next</p>
-            <h3 className="mt-3 text-2xl font-bold">Cloud & DevOps</h3>
+            <p className="font-mono text-xs uppercase tracking-widest text-teal-300">
+              Cloud & DevOps
+            </p>
+            <h3 className="mt-3 text-2xl font-bold">
+              Deployment & Automation
+            </h3>
           </div>
+
           <div className="md:col-span-2 grid gap-4 sm:grid-cols-2">
             {[
-              ["Docker", "Containerizing applications"],
-              ["GitHub Actions", "Automated CI/CD workflows"],
-              ["Azure", "Cloud deployment fundamentals"],
-              ["Monitoring", "Application reliability and observability"],
+              ["AWS", "EC2, Elastic Beanstalk, RDS and cloud deployment"],
+              ["Load Balancing", "Elastic Load Balancing and Auto Scaling"],
+              ["Monitoring", "CloudWatch and SNS notifications"],
+              ["Docker", "Containerizing applications and microservices"],
+              ["Kubernetes", "Container orchestration and persistent volumes"],
+              ["Jenkins", "CI/CD pipelines and automated deployments"],
             ].map(([title, desc]) => (
-              <div key={title} className="rounded-xl border border-slate-800 bg-slate-950/40 p-4">
+              <div
+                key={title}
+                className="rounded-xl border border-slate-800 bg-slate-950/40 p-4"
+              >
                 <div className="font-semibold text-slate-200">{title}</div>
                 <div className="mt-1 text-sm text-slate-500">{desc}</div>
               </div>
