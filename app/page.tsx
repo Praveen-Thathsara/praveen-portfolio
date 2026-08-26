@@ -58,12 +58,57 @@ const projects = [
 ];
 
 const skillGroups = [
-  { title: "Languages", icon: Code2, items: ["JavaScript", "TypeScript", "Java", "Python", "Dart", "C"] },
-  { title: "Frontend", icon: Code2, items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"] },
-  { title: "Backend", icon: Server, items: ["Node.js", "Express", "FastAPI", "REST APIs"] },
-  { title: "Mobile", icon: Smartphone, items: ["Flutter"] },
-  { title: "Databases", icon: Database, items: ["Firebase", "Firestore", "MongoDB", "MySQL"] },
-  { title: "Cloud & DevOps", icon: Cloud, items: ["Git", "GitHub Actions", "Docker", "Azure", "Linux"] },
+  { 
+  title: "Languages", 
+  icon: Code2, 
+  items: ["JavaScript", "TypeScript", "Java", "Python", "Dart", "C"] 
+},
+
+{ 
+  title: "Frontend", 
+  icon: Code2, 
+  items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"] 
+},
+
+{ 
+  title: "Backend", 
+  icon: Server, 
+  items: ["Node.js", "Express", "FastAPI", "REST APIs"] 
+},
+
+{ 
+  title: "Mobile", 
+  icon: Smartphone, 
+  items: ["Flutter"] 
+},
+
+{ 
+  title: "Databases", 
+  icon: Database, 
+  items: ["Firebase", "Firestore", "MongoDB", "MySQL"] 
+},
+
+{ 
+  title: "Cloud & DevOps", 
+  icon: Cloud, 
+  items: [
+    "AWS",
+    "EC2",
+    "Elastic Beanstalk",
+    "RDS",
+    "Elastic Load Balancing",
+    "Auto Scaling",
+    "CloudWatch",
+    "SNS",
+    "Docker",
+    "Docker Compose",
+    "Kubernetes",
+    "Jenkins",
+    "CI/CD",
+    "Git",
+    "GitHub"
+  ] 
+},
 ];
 
 export default function Home() {
