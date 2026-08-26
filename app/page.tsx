@@ -143,7 +143,7 @@ export default function Home() {
               </div>
               <p className="mb-3 font-mono text-sm text-slate-400">Hi, I&apos;m</p>
               <h1 className="text-5xl font-black tracking-[-.06em] text-white sm:text-7xl">
-                Praveen <span className="text-gradient">Thathsara.</span>
+                Praveen <span className="text-gradient">Rathnayake.</span>
               </h1>
               <h2 className="mt-5 max-w-3xl text-2xl font-bold tracking-tight text-slate-300 sm:text-4xl">
                 Computer Science Undergraduate · Software Developer · DevOps Enthusiast
