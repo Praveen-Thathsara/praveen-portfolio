@@ -25,7 +25,7 @@ const projects = [
       "Employee management platform with scheduling, attendance, leave management and an administrative dashboard.",
     stack: ["React", "Firebase", "Firestore", "Flutter", "Tailwind"],
     github: "https://github.com/OnTime-HR/OnTime-web",
-    demo: "#contact",
+    demo: "https://www.ontimeadmin.me/",
     featured: true,
   },
   {
@@ -43,7 +43,7 @@ const projects = [
     description:
       "FastAPI-based movie service designed around external movie data, API endpoints and backend development practice.",
     stack: ["Python", "FastAPI", "REST API"],
-    github: "https://github.com/Praveen-Thathsara",
+    github: "https://github.com/Praveen-Thathsara/trending-movies",
     demo: "#contact",
   },
   {
