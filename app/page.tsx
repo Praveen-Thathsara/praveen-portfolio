@@ -29,6 +29,15 @@ const projects = [
     featured: true,
   },
   {
+    name: "CallDoc",
+    label: "Full-Stack Web Application",
+    description:
+      "Doctor channeling platform that allows patients to find doctors, view available schedules, and book appointments through an interactive web application.",
+    stack: ["React", "Node.js", "Express", "MongoDB"],
+    github: "https://github.com/Praveen-Thathsara/Doctor-Channeling-Website-CallDoc",
+    demo: "#contact",
+  },
+  {
     name: "Trending Movies API",
     label: "Backend / API",
     description:
@@ -39,7 +48,7 @@ const projects = [
   },
   {
     name: "Gallery Website",
-    label: "Full-stack project",
+    label: "Front-End project",
     description:
       "Photo gallery application with upload and download functionality, built while learning full-stack web development.",
     stack: ["React", "Node.js", "MongoDB"],
