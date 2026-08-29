@@ -126,7 +126,12 @@ export default function Home() {
                 {item}
               </a>
             ))}
-            <a href="/cv/Praveen-Thathsara-CV.pdf" className="rounded-lg border border-slate-700 px-4 py-2 transition hover:border-teal-400 hover:text-teal-300">
+            <a
+              href="/cv/Praveen-Thathsara-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-slate-700 px-4 py-2 transition hover:border-teal-400 hover:text-teal-300"
+            >
               Resume
             </a>
           </div>
@@ -157,8 +162,14 @@ export default function Home() {
                 <a href="#projects" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-teal-400 to-sky-500 px-6 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5">
                   View Projects <ArrowUpRight size={18} />
                 </a>
-                <a href="/cv/Praveen-Thathsara-CV.pdf" className="inline-flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 font-semibold text-slate-200 transition hover:border-teal-400 hover:text-teal-300">
-                  Download CV
+                <a
+                  href="/cv/Praveen-Thathsara-CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 font-semibold text-slate-200 transition hover:border-teal-400 hover:text-teal-300"
+                >
+                  <ExternalLink size={18} />
+                  View CV
                 </a>
               </div>
 
