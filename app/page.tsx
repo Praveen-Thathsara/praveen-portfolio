@@ -1,5 +1,6 @@
 import {
   ArrowUpRight,
+  Award,
   BriefcaseBusiness,
   Cloud,
   Code2,
@@ -26,17 +27,22 @@ const projects = [
     stack: ["React", "Firebase", "Firestore", "Flutter", "Tailwind"],
     github: "https://github.com/OnTime-HR/OnTime-web",
     demo: "https://www.ontimeadmin.me/",
+    image: "/images/projects/ontime.jpeg",
     featured: true,
   },
+
   {
     name: "CallDoc",
     label: "Full-Stack Web Application",
     description:
       "Doctor channeling platform that allows patients to find doctors, view available schedules, and book appointments through an interactive web application.",
     stack: ["React", "Node.js", "Express", "MongoDB"],
-    github: "https://github.com/Praveen-Thathsara/Doctor-Channeling-Website-CallDoc",
+    github:
+      "https://github.com/Praveen-Thathsara/Doctor-Channeling-Website-CallDoc",
     demo: "#contact",
+    image: "/images/projects/calldoc.png",
   },
+
   {
     name: "Trending Movies API",
     label: "Backend / API",
@@ -45,15 +51,19 @@ const projects = [
     stack: ["Python", "FastAPI", "REST API"],
     github: "https://github.com/Praveen-Thathsara/trending-movies",
     demo: "#contact",
+    image: "/images/projects/trending-movies.jpg",
   },
+
   {
     name: "Gallery Website",
     label: "Front-End project",
     description:
       "Photo gallery application with upload and download functionality, built while learning full-stack web development.",
     stack: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/Praveen-Thathsara/Gallery-website-Praveen-s-Gallery-",
+    github:
+      "https://github.com/Praveen-Thathsara/Gallery-website-Praveen-s-Gallery-",
     demo: "#contact",
+    image: "/images/projects/gallery.jpg",
   },
 ];
 
@@ -111,6 +121,80 @@ const skillGroups = [
   },
 ];
 
+const certifications = [
+  {
+    name: "Docker Foundations Professional Certificate",
+    issuer: "Docker, Inc.",
+    date: "Nov 2025",
+    category: "Containers",
+    image: "/images/certifications/dockerfoundation.png",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/a192464705c89e81b48143e745010b03af8a831096f5ef1e59d55113a82cd572",
+  },
+
+  {
+    name: "DevOps Foundations",
+    issuer: "LinkedIn",
+    date: "Oct 2025",
+    category: "DevOps",
+    image: "/images/certifications/devops1.png",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/3d49c07e690cd0239cb5685cb5221c67cf79ad1bd05e4c588427c89812c0ca7c",
+  },
+
+  {
+    name: "Career Essentials in GitHub Professional Certificate",
+    issuer: "GitHub",
+    date: "Oct 2025",
+    category: "Git & GitHub",
+    image: "/images/certifications/github1.png",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/dc5d8daac161a4fa2eeccd01a023d892e26ee73e96c47f139415ac07c66288ad",
+  },
+
+  {
+    name: "Practical GitHub Actions",
+    issuer: "LinkedIn",
+    date: "Oct 2025",
+    category: "CI/CD",
+    image: "/images/certifications/github1.png",
+    credentialUrl: "https://www.linkedin.com/learning/certificates/adb8eafcb0e682150019e8e173703f2e9762007a9eda84c4eb8bcc2b92447c75",
+  },
+
+  {
+    name: "AWS Educate Getting Started with Cloud Ops",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Dec 2025",
+    category: "Cloud",
+    image: "/images/certifications/aws1.png",
+    credentialUrl: "https://www.credly.com/badges/4fb7c378-6f04-426d-bd6f-6567c2f80715/linked_in_profile",
+  },
+
+  {
+    name: "AWS Educate Getting Started with Compute",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Dec 2025",
+    category: "Cloud",
+    image: "/images/certifications/aws1.png",
+    credentialUrl: "https://www.credly.com/badges/25fd0713-67b8-417e-91a5-e03b7de24b6b/linked_in_profile",
+  },
+
+  {
+    name: "AWS Educate Getting Started with Networking",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Dec 2025",
+    category: "Cloud",
+    image: "/images/certifications/aws1.png",
+    credentialUrl: "https://www.credly.com/badges/3c9c2e53-4252-43c7-ad3e-397393b8b703/linked_in_profile",
+  },
+
+  {
+    name: "AWS Educate Getting Started with Security",
+    issuer: "Amazon Web Services (AWS)",
+    date: "Dec 2025",
+    category: "Cloud Security",
+    image: "/images/certifications/aws1.png",
+    credentialUrl: "https://www.credly.com/badges/9bf1b9d8-b21c-4859-b26f-503135fdd6f1/linked_in_profile",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -121,8 +205,12 @@ export default function Home() {
           </a>
 
           <div className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-            {["about", "experience", "projects", "skills", "contact"].map((item) => (
-              <a key={item} href={`#${item}`} className="capitalize transition hover:text-teal-300">
+            {["about", "experience", "projects", "skills", "certifications", "contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                className="capitalize transition hover:text-teal-300"
+              >
                 {item}
               </a>
             ))}
@@ -249,25 +337,75 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {projects.map((project, i) => (
-              <HoverCard key={project.name} delay={i * 0.05} className={`card flex flex-col p-7 ${project.featured ? "lg:col-span-2" : ""}`}>
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-mono text-xs uppercase tracking-widest text-teal-300">{project.label}</span>
-                  {project.featured && <Rocket size={20} className="text-teal-300" />}
-                </div>
-                <h3 className="mt-5 text-2xl font-bold text-white">{project.name}</h3>
-                <p className="mt-4 leading-7 text-slate-400">{project.description}</p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <span key={tech} className="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-xs text-slate-300">{tech}</span>
-                  ))}
-                </div>
-                <div className="mt-auto flex gap-5 pt-8 text-sm font-semibold">
-                  <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-slate-300 hover:text-teal-300">
-                    <Github size={17} /> GitHub
-                  </a>
-                  <a href={project.demo} className="inline-flex items-center gap-2 text-slate-300 hover:text-teal-300">
-                    <ExternalLink size={17} /> Demo
-                  </a>
+              <HoverCard
+                key={project.name}
+                delay={i * 0.05}
+                className={`group relative flex min-h-[420px] overflow-hidden rounded-2xl border border-slate-800 ${project.featured ? "lg:col-span-2" : ""
+                  }`}
+              >
+                {/* Background Image */}
+                <img
+                  src={project.image}
+                  alt=""
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-slate-950/80 transition duration-500 group-hover:bg-slate-950/70" />
+
+                {/* Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/20" />
+
+                {/* Content */}
+                <div className="relative z-10 flex w-full flex-col p-7">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="font-mono text-xs uppercase tracking-widest text-teal-300">
+                      {project.label}
+                    </span>
+
+                    {project.featured && (
+                      <Rocket size={20} className="text-teal-300" />
+                    )}
+                  </div>
+
+                  <h3 className="mt-5 text-2xl font-bold text-white">
+                    {project.name}
+                  </h3>
+
+                  <p className="mt-4 max-w-xl leading-7 text-slate-300">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {project.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-slate-700/80 bg-slate-900/80 px-3 py-1 text-xs text-slate-300 backdrop-blur-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto flex gap-5 pt-8 text-sm font-semibold">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-slate-200 transition hover:text-teal-300"
+                    >
+                      <Github size={17} />
+                      GitHub
+                    </a>
+
+                    <a
+                      href={project.demo}
+                      className="inline-flex items-center gap-2 text-slate-200 transition hover:text-teal-300"
+                    >
+                      <ExternalLink size={17} />
+                      Demo
+                    </a>
+                  </div>
                 </div>
               </HoverCard>
             ))}
@@ -331,11 +469,94 @@ export default function Home() {
           </div>
         </FadeIn>
       </section>
+      <section id="certifications" className="container-page py-24">
+        <FadeIn>
+          <p className="mb-2 font-mono text-sm text-teal-300">
+            05 / Certifications
+          </p>
+
+          <h2 className="section-title">
+            Certifications & learning.
+          </h2>
+
+          <p className="mt-4 max-w-2xl text-slate-400">
+            Professional certifications and technical learning focused on
+            DevOps, cloud computing, containers, CI/CD and modern software
+            development.
+          </p>
+        </FadeIn>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {certifications.map((cert, i) => (
+            <FadeIn
+              key={cert.name}
+              delay={i * 0.04}
+              className="group"
+            >
+              <article className="relative min-h-[230px] overflow-hidden rounded-2xl border border-slate-800">
+
+                {/* Background */}
+                <img
+                  src={cert.image}
+                  alt=""
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-slate-950/85" />
+
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-950/75 to-slate-900/60" />
+
+                {/* Content */}
+                <div className="relative z-10 flex min-h-[230px] flex-col p-6">
+
+                  <div className="flex items-start justify-between gap-4">
+
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-700 bg-slate-900/80 text-teal-300 backdrop-blur-sm">
+                      <Award size={21} />
+                    </div>
+
+                    <span className="rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-slate-400">
+                      {cert.category}
+                    </span>
+
+                  </div>
+
+                  <h3 className="mt-5 max-w-lg text-lg font-bold leading-6 text-white">
+                    {cert.name}
+                  </h3>
+
+                  <p className="mt-2 text-sm text-teal-300">
+                    {cert.issuer}
+                  </p>
+
+                  <p className="mt-1 text-xs text-slate-500">
+                    Issued {cert.date}
+                  </p>
+
+                  <div className="mt-auto pt-6">
+                    <a
+                      href={cert.credentialUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-slate-300 transition hover:text-teal-300"
+                    >
+                      View Credential
+                      <ExternalLink size={16} />
+                    </a>
+                  </div>
+
+                </div>
+              </article>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
 
       <section id="contact" className="container-page py-24">
         <FadeIn className="card overflow-hidden p-8 text-center sm:p-14">
           <ShieldCheck className="mx-auto text-teal-300" size={28} />
-          <p className="mt-5 font-mono text-sm text-teal-300">05 / Contact</p>
+          <p className="mt-5 font-mono text-sm text-teal-300">06 / Contact</p>
           <h2 className="mt-3 text-4xl font-black tracking-tight text-white">Let&apos;s build something useful.</h2>
           <p className="mx-auto mt-5 max-w-xl leading-7 text-slate-400">
             I&apos;m preparing for software engineering and DevOps internship opportunities. If you&apos;d like to connect,
