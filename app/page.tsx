@@ -43,6 +43,18 @@ const projects = [
     image: "/images/projects/calldoc.png",
   },
 
+ {
+    name: "GearXpert",
+    label: "Full-Stack Web Application | Ongoing",
+    description:
+        "Full-stack automotive spare parts platform that allows users to browse products, submit parts requests, and manage automotive-related product information through an interactive web application.",
+    stack: ["Next.js", "Node.js", "Express", "Supabase"],
+    github:
+        "https://github.com/Praveen-Thathsara/GearXpert",
+    demo: "#contact",
+    image: "/images/projects/gearxpert.png",
+},
+
   {
     name: "Trending Movies API",
     label: "Backend / API",
