@@ -3,10 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Praveen Thathsara | Software Developer",
-  description: "Portfolio of Praveen Thathsara, a Computer Science undergraduate focused on software engineering, cloud and DevOps.",
+  description:
+    "Portfolio of Praveen Thathsara, a Computer Science undergraduate focused on software engineering, cloud and DevOps.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body>{children}</body>
