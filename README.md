@@ -1,14 +1,13 @@
-# Praveen Thathsara — Portfolio
+# Praveen Rathnayake — Portfolio
 
-Modern internship-focused portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion.
+A responsive Next.js and TypeScript portfolio with a calm editorial layout. Portfolio content is separated from page layout so projects and profile details are easy to update.
 
 ## Stack
 
-- Next.js
+- Next.js 15
 - TypeScript
-- Tailwind CSS v4
-- Framer Motion
-- Lucide React
+- Tailwind CSS v4 and project CSS
+- React
 
 ## Run locally
 
@@ -17,18 +16,20 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000
+Open http://localhost:3000.
 
-## Before deploying
+## Update the portfolio
 
-1. Add `public/resume.pdf`.
-2. Replace any project/demo URLs that are still placeholders.
-3. Add real project screenshots.
-4. Verify email, GitHub and LinkedIn links.
-5. Run `npm run build`.
+Edit `data/portfolio.ts` to update your profile, introduction, social links, projects, skill groups, experience, certifications and navigation. To add a project, add one object to `portfolio.projects` and put its preview image under `public/images/projects/`. Certification images belong under `public/images/certifications/`. Replace the CV at `public/cv/Praveen-Thathsara-CV.pdf` to keep the existing link working.
 
-## Deploy
+The page structure is in `app/page.tsx`, the design system and responsive styles are in `app/globals.css`, and the browser title/description are in `app/layout.tsx`.
 
-Recommended: Vercel.
+## Before deployment
 
-For GitHub Pages, Next.js requires a static export configuration and a compatible deployment workflow. Vercel is the simpler choice for this version.
+- Confirm the CV, email and social URLs in `data/portfolio.ts`.
+- Add or replace project screenshots and certification images.
+- Run `npm run build` before deploying.
+
+Vercel is the recommended deployment target.
+
+
